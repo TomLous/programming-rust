@@ -1,8 +1,5 @@
 use std::env;
 use std::str::FromStr;
-use crate::gcd::gcd;
-
-mod gcd;
 
 fn main() {
     let mut numbers = Vec::new();
@@ -19,7 +16,7 @@ fn main() {
 
     let mut d = numbers[0];
     for m in &numbers[1..] {
-        d = gcd(d, *m);
+        d = gcd::gcd(d, *m);
     }
     println!("The greatest common divisor of {:?} is {}",
              numbers, d);
